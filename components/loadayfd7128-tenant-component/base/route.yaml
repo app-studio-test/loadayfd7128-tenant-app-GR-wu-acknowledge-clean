@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadayfd7128-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadayfd7128-tenant-component
+    app.kubernetes.io/part-of: loadayfd7128-tenant-app
+  name: loadayfd7128-tenant-component
+  namespace: loadayfd7128-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadayfd7128-tenant-component
+    weight: null
+status: {}
